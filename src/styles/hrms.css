@@ -1,0 +1,1522 @@
+/* HRMS workspace styles. */
+
+.executive-kpi-section--hr {
+  grid-template-columns: minmax(250px, 306px) minmax(0, 1fr);
+}
+
+.executive-kpi-section--hr .executive-kpi-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.hrms-scan-page .ceo-scan-summary strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.hrms-scan-page .ceo-scan-summary p {
+  max-width: 760px;
+  font-size: clamp(20px, 1.22vw, 22px);
+}
+
+.hrms-signal-visual {
+  opacity: 0.68;
+}
+
+.hrms-live-action-grid .coo-resource-row,
+.hrms-live-action-grid .coo-queue-row,
+.hrms-live-action-grid .coo-equipment-row {
+  cursor: default;
+}
+
+.hrms-live-action-grid .coo-resource-row .v2-pill,
+.hrms-live-action-grid .coo-equipment-row .v2-pill,
+.hrms-live-action-grid .coo-queue-row .v2-pill {
+  justify-self: end;
+}
+
+.hrms-page-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: -6px 0 16px;
+}
+
+.hrms-primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 78%, transparent);
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.hrms-primary-action svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+.hrms-primary-action:hover {
+  background: color-mix(in srgb, var(--color-primary) 92%, #111827);
+}
+
+.hrms-sidebar-nav {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  padding: 16px 12px !important;
+}
+
+.hrms-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  color: var(--color-muted-foreground);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.hrms-sidebar-link:hover {
+  background: color-mix(in srgb, var(--color-muted) 62%, transparent);
+  color: var(--color-foreground);
+}
+
+.hrms-sidebar-link[aria-current="page"] {
+  background: var(--primary-soft);
+  color: var(--color-primary);
+}
+
+.hrms-sidebar-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.hrms-department-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hrms-department-card,
+.hrms-stage-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 138px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-background);
+  text-align: left;
+}
+
+.hrms-department-card:hover,
+.hrms-stage-card:hover {
+  border-color: color-mix(in srgb, var(--primary) 42%, var(--color-border));
+  background: color-mix(in srgb, var(--primary-soft) 42%, var(--color-background));
+}
+
+.hrms-department-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hrms-department-card em,
+.hrms-stage-card span {
+  color: var(--color-muted-foreground);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hrms-department-card strong,
+.hrms-stage-card strong {
+  color: var(--color-foreground);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.hrms-department-card p,
+.hrms-stage-card em,
+.hrms-department-card small {
+  color: var(--color-muted-foreground);
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.hrms-department-card i {
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--color-muted);
+}
+
+.hrms-department-card i u {
+  display: block;
+  width: var(--hrms-fill);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--primary), var(--chart-2));
+  text-decoration: none;
+}
+
+.hrms-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hrms-stage-card {
+  min-height: 128px;
+}
+
+.hrms-stage-card--bad {
+  background: color-mix(in srgb, var(--destructive) 7%, var(--color-background));
+}
+
+.hrms-stage-card--watch {
+  background: color-mix(in srgb, var(--warning) 8%, var(--color-background));
+}
+
+.hrms-biometric-layout .v2-action-queue-panel {
+  align-self: start;
+}
+
+.hrms-command-grid,
+.hrms-staff-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.hrms-control-split {
+  align-items: start;
+}
+
+.hrms-staff-side {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+.hrms-create-panel {
+  align-self: start;
+}
+
+.hrms-create-panel .v2-panel-heading {
+  gap: 14px;
+}
+
+.hrms-create-panel--drawer {
+  margin-top: 18px;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.hrms-create-panel--drawer .v2-panel-heading {
+  display: none;
+}
+
+.hrms-staff-form {
+  display: grid;
+  gap: 16px;
+}
+
+.hrms-staff-form fieldset {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-muted) 26%, var(--color-background));
+}
+
+.hrms-staff-form legend {
+  padding: 0 6px;
+  color: var(--color-muted-foreground);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hrms-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hrms-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.hrms-field span {
+  color: var(--color-muted-foreground);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hrms-field input,
+.hrms-field select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-foreground);
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  padding: 0 11px;
+}
+
+.hrms-field input:focus,
+.hrms-field select:focus {
+  border-color: color-mix(in srgb, var(--color-primary) 48%, var(--color-border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 11%, transparent);
+}
+
+.hrms-biometric-setup,
+.hrms-access-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+}
+
+.hrms-biometric-setup .hrms-field {
+  grid-column: 1 / -1;
+}
+
+.hrms-biometric-setup label:not(.hrms-field),
+.hrms-access-checks label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-foreground);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hrms-biometric-setup input,
+.hrms-access-checks input {
+  accent-color: var(--color-primary);
+}
+
+.hrms-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hrms-secondary-action {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--color-foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hrms-secondary-action:hover {
+  background: var(--color-muted);
+}
+
+.hrms-form-status {
+  min-height: 18px;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hrms-drawer-panel {
+  width: min(760px, calc(100vw - 40px));
+}
+
+.hrms-wire-page {
+  display: grid;
+  gap: 16px;
+}
+
+.hrms-wire-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hrms-wire-hero h2 {
+  margin: 0;
+  color: var(--color-foreground);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hrms-wire-hero p {
+  margin-top: 6px;
+  color: var(--color-muted-foreground);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.hrms-wire-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hrms-wire-metric {
+  display: grid;
+  gap: 16px;
+  min-height: 118px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+}
+
+.hrms-wire-metric > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-foreground);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.hrms-wire-icon {
+  display: inline-flex;
+  color: var(--color-primary);
+}
+
+.hrms-wire-metric b {
+  color: var(--color-foreground);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.hrms-wire-metric em {
+  color: var(--color-muted-foreground);
+  font-size: 12.5px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.hrms-wire-toolbar {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 120px 200px;
+  gap: 12px;
+  align-items: start;
+  position: relative;
+  z-index: 10;
+}
+
+.hrms-wire-search,
+.hrms-wire-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  padding: 0 12px;
+  background: var(--color-surface);
+  color: var(--color-muted-foreground);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+}
+
+.hrms-wire-control {
+  position: relative;
+  min-width: 0;
+}
+
+.hrms-wire-control:focus-within .hrms-wire-filter {
+  border-color: color-mix(in srgb, var(--color-primary) 44%, var(--color-border));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
+.hrms-wire-search svg,
+.hrms-wire-filter svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.hrms-wire-search input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--color-foreground);
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.hrms-wire-filter {
+  width: 100%;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hrms-wire-filter i {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.hrms-wire-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 30;
+  display: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.1);
+}
+
+.hrms-wire-control:focus-within .hrms-wire-popover {
+  display: block;
+}
+
+.hrms-wire-popover--filters {
+  width: min(420px, calc(100vw - 96px));
+  padding: 12px;
+}
+
+.hrms-wire-popover--sort {
+  width: 240px;
+  padding: 8px;
+}
+
+.hrms-wire-popover h3 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hrms-wire-filter-row {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hrms-wire-filter-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-foreground);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hrms-wire-filter-row input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.hrms-wire-filter-row > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0 11px;
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.hrms-wire-filter-row > button i {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--color-muted-foreground);
+  border-bottom: 1.5px solid var(--color-muted-foreground);
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.hrms-wire-popover-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.hrms-wire-clear,
+.hrms-wire-apply,
+.hrms-wire-popover--sort button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.hrms-wire-clear {
+  min-height: 32px;
+  padding: 0 12px;
+  color: var(--color-muted-foreground);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.hrms-wire-apply {
+  min-height: 34px;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.hrms-wire-popover--sort button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 34px;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: var(--color-foreground);
+  text-align: left;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.hrms-wire-popover--sort button.is-active {
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
+}
+
+.hrms-wire-popover--sort strong {
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hrms-wire-table-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+}
+
+.hrms-wire-table {
+  display: grid;
+  align-items: center;
+}
+
+.hrms-wire-table--staff {
+  grid-template-columns: minmax(260px, 1.35fr) minmax(150px, 0.7fr) minmax(150px, 0.72fr) minmax(190px, 0.9fr) minmax(120px, 0.56fr) 58px;
+}
+
+.hrms-wire-table--departments {
+  grid-template-columns: minmax(260px, 1.3fr) minmax(110px, 0.5fr) minmax(260px, 1.05fr) minmax(120px, 0.5fr) minmax(130px, 0.55fr) 58px;
+}
+
+.hrms-wire-table > b,
+.hrms-wire-table > span,
+.hrms-wire-table > div,
+.hrms-wire-table > button {
+  min-height: 56px;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 18px;
+}
+
+.hrms-wire-table > b {
+  display: flex;
+  align-items: center;
+  color: var(--color-muted-foreground);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.hrms-wire-table > span,
+.hrms-wire-table > div {
+  display: flex;
+  align-items: center;
+  color: var(--color-foreground);
+  font-size: 13px;
+}
+
+.hrms-person {
+  display: grid !important;
+  grid-template-columns: 38px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-content: center;
+}
+
+.hrms-person > span,
+.hrms-head i {
+  display: inline-grid;
+  grid-row: 1 / span 2;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--color-primary) 10%, #eef2ff);
+  color: color-mix(in oklab, var(--color-primary) 70%, #6366f1);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hrms-person strong,
+.hrms-dept-name strong {
+  color: var(--color-foreground);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hrms-person em,
+.hrms-dept-name em {
+  color: var(--color-muted-foreground);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.hrms-dept-name {
+  display: grid !important;
+  align-content: center;
+  gap: 3px;
+}
+
+.hrms-mono {
+  color: var(--color-muted-foreground) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hrms-role-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: var(--color-foreground);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hrms-role-tag svg {
+  width: 15px;
+  height: 15px;
+  color: color-mix(in oklab, var(--color-primary) 70%, #6366f1);
+}
+
+.hrms-wire-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hrms-wire-status--low {
+  border-color: color-mix(in oklab, var(--color-success) 26%, var(--color-border));
+  background: color-mix(in oklab, var(--color-success) 14%, var(--color-surface));
+  color: #087b4a;
+}
+
+.hrms-wire-status--medium {
+  border-color: color-mix(in oklab, var(--color-warning) 32%, var(--color-border));
+  background: color-mix(in oklab, var(--color-warning) 14%, var(--color-surface));
+  color: var(--warning-foreground);
+}
+
+.hrms-wire-status--high {
+  border-color: color-mix(in oklab, var(--color-destructive) 28%, var(--color-border));
+  background: color-mix(in oklab, var(--color-destructive) 12%, var(--color-surface));
+  color: #d33a3a;
+}
+
+.hrms-row-arrow {
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  min-height: 30px !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 7px;
+  padding: 0 !important;
+  background: var(--color-surface);
+  color: var(--color-muted-foreground);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.hrms-row-arrow:hover {
+  color: var(--color-primary);
+  border-color: color-mix(in oklab, var(--color-primary) 34%, var(--color-border)) !important;
+}
+
+.hrms-head {
+  gap: 10px;
+  font-weight: 600;
+}
+
+.hrms-no-head {
+  color: var(--warning-foreground) !important;
+}
+
+.hrms-wire-table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 0 18px;
+  color: var(--color-muted-foreground);
+  font-size: 13px;
+}
+
+.hrms-wire-table-footer button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: var(--color-surface);
+  color: var(--color-muted-foreground);
+}
+
+.hrms-wire-page,
+.hrms-access-page {
+  display: grid;
+  gap: 16px;
+}
+
+.hrms-wire-hero {
+  align-items: flex-start;
+}
+
+.hrms-wire-hero h2 {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.hrms-wire-hero p {
+  max-width: 760px;
+  font-size: 13.5px;
+}
+
+.hrms-wire-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hrms-wire-metric {
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  min-height: 124px;
+  padding: 16px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.hrms-wire-metric > .hrms-wire-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: var(--color-muted-foreground);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.hrms-wire-metric > .hrms-wire-title strong {
+  min-width: 0;
+  overflow: hidden;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hrms-wire-metric .hrms-wire-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: var(--color-muted-foreground);
+}
+
+.hrms-wire-metric > .hrms-wire-value {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  min-width: 0;
+}
+
+.hrms-wire-metric > .hrms-wire-value b {
+  min-width: 0;
+  color: var(--color-foreground);
+  font-size: clamp(28px, 1.75vw, 30px);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hrms-wire-metric > .hrms-wire-value em {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-muted-foreground);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hrms-wire-toolbar {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 150px 240px minmax(max-content, 1fr);
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 12;
+}
+
+.hrms-wire-toolbar .hrms-primary-action {
+  justify-self: end;
+  min-height: 44px;
+}
+
+.hrms-wire-search,
+.hrms-wire-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-muted-foreground);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.hrms-wire-search {
+  padding: 0 14px;
+}
+
+.hrms-wire-search svg,
+.hrms-wire-filter svg {
+  flex: 0 0 auto;
+  color: inherit;
+}
+
+.hrms-wire-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-foreground);
+  font-size: 14px;
+  outline: none;
+}
+
+.hrms-wire-search input::placeholder {
+  color: color-mix(in srgb, var(--color-muted-foreground) 76%, transparent);
+}
+
+.hrms-wire-control {
+  position: relative;
+  min-width: 0;
+}
+
+.hrms-wire-filter {
+  justify-content: space-between;
+  padding: 0 12px;
+  color: var(--color-foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hrms-wire-filter span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hrms-wire-filter > svg:last-child {
+  color: var(--color-muted-foreground);
+}
+
+.hrms-wire-search:focus-within,
+.hrms-wire-control.is-open .hrms-wire-filter,
+.hrms-wire-filter:focus-visible {
+  border-color: color-mix(in srgb, var(--color-primary) 42%, var(--color-border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 10%, transparent);
+  outline: none;
+}
+
+.hrms-wire-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 40;
+  display: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: 0 18px 44px rgba(16, 24, 40, 0.12);
+}
+
+.hrms-wire-control.is-open .hrms-wire-popover {
+  display: block;
+}
+
+.hrms-wire-popover--filters {
+  width: min(440px, calc(100vw - 96px));
+  padding: 14px;
+}
+
+.hrms-wire-popover--sort {
+  width: 290px;
+  padding: 12px;
+}
+
+.hrms-wire-popover h3 {
+  margin: 0;
+  padding: 4px 4px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hrms-wire-filter-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hrms-wire-filter-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--color-foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hrms-wire-filter-row label input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: var(--color-primary);
+}
+
+.hrms-wire-filter-row > button,
+.hrms-wire-filter-row > input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0 12px;
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  font-size: 13.5px;
+  font-weight: 500;
+  outline: none;
+}
+
+.hrms-wire-filter-row > input::placeholder {
+  color: var(--color-muted-foreground);
+}
+
+.hrms-wire-filter-row > button svg {
+  color: var(--color-muted-foreground);
+}
+
+.hrms-wire-popover-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 4px 4px;
+}
+
+.hrms-wire-clear,
+.hrms-wire-apply,
+.hrms-wire-popover--sort button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.hrms-wire-clear,
+.hrms-wire-apply {
+  min-height: 36px;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.hrms-wire-clear {
+  border: 1px solid var(--color-border);
+  color: var(--color-muted-foreground);
+}
+
+.hrms-wire-apply {
+  background: color-mix(in srgb, var(--color-primary) 86%, var(--color-foreground));
+  color: #fff;
+}
+
+.hrms-wire-popover--sort button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 42px;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: var(--color-foreground);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.hrms-wire-popover--sort button.is-active {
+  background: var(--primary-soft);
+  color: color-mix(in srgb, var(--color-primary) 78%, var(--color-foreground));
+}
+
+.hrms-wire-popover--sort button svg {
+  color: currentColor;
+}
+
+.hrms-access-page .v2-workspace-split {
+  margin-top: 2px;
+}
+
+@media (max-width: 1180px) {
+  .hrms-wire-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hrms-wire-toolbar {
+    grid-template-columns: minmax(260px, 1fr) repeat(2, minmax(120px, max-content));
+  }
+
+  .hrms-wire-toolbar .hrms-primary-action {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 720px) {
+  .hrms-wire-metrics,
+  .hrms-wire-toolbar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hrms-scan-page {
+  gap: 24px;
+}
+
+.hrms-clinical-grid {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.hrms-clinical-grid--floor {
+  grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+}
+
+.hrms-clinical-grid--risk {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hrms-command-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.hrms-command-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.hrms-command-card-head {
+  justify-content: space-between;
+}
+
+.hrms-command-card-head > span {
+  color: var(--color-muted-foreground);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.hrms-command-card-head em {
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: color-mix(in srgb, #ef4444 7%, var(--color-surface));
+  color: color-mix(in srgb, #dc2626 86%, var(--color-foreground));
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hrms-command-card {
+  padding: 20px 24px;
+}
+
+.hrms-panel-head {
+  margin-bottom: 16px;
+}
+
+.hrms-panel-head strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-muted-foreground);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.hrms-shift-gap-list,
+.hrms-criticality-list,
+.hrms-exception-list {
+  display: grid;
+  gap: 10px;
+}
+
+.hrms-shift-gap-row {
+  --hrms-row-accent: #16a34a;
+  display: grid;
+  grid-template-columns: minmax(112px, 0.62fr) minmax(0, 1.35fr) minmax(180px, 0.8fr);
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--hrms-row-accent) 13%, var(--color-border));
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: var(--color-surface);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--hrms-row-accent) 72%, var(--color-border));
+}
+
+.hrms-shift-gap-row--critical,
+.hrms-criticality-row--critical,
+.hrms-exception-row--critical {
+  --hrms-row-accent: #ef4444;
+}
+
+.hrms-shift-gap-row--watch,
+.hrms-criticality-row--watch,
+.hrms-exception-row--watch {
+  --hrms-row-accent: #f59e0b;
+}
+
+.hrms-shift-gap-row--stable,
+.hrms-criticality-row--stable,
+.hrms-exception-row--stable {
+  --hrms-row-accent: #16a34a;
+}
+
+.hrms-shift-window,
+.hrms-shift-gap-main,
+.hrms-shift-action,
+.hrms-criticality-row > div,
+.hrms-criticality-row p,
+.hrms-exception-person,
+.hrms-exception-row p {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.hrms-shift-window strong,
+.hrms-criticality-row strong,
+.hrms-exception-person strong {
+  overflow: hidden;
+  color: var(--color-foreground);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hrms-shift-window span,
+.hrms-criticality-row > div span,
+.hrms-exception-person span,
+.hrms-exception-row p span {
+  overflow: hidden;
+  color: var(--color-muted-foreground);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hrms-shift-gap-main span {
+  color: color-mix(in srgb, var(--hrms-row-accent) 86%, var(--color-foreground));
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hrms-shift-gap-main strong,
+.hrms-exception-row p b {
+  color: var(--color-foreground);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.hrms-shift-action {
+  justify-items: end;
+}
+
+.hrms-shift-action em {
+  color: var(--color-muted-foreground);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hrms-shift-action button,
+.hrms-exception-row button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  border: 1px solid color-mix(in srgb, var(--hrms-row-accent) 24%, var(--color-border));
+  border-radius: 8px;
+  padding: 0 12px;
+  background: color-mix(in srgb, var(--hrms-row-accent) 5%, var(--color-surface));
+  color: color-mix(in srgb, var(--hrms-row-accent) 82%, var(--color-foreground));
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hrms-shift-action button:hover,
+.hrms-exception-row button:hover {
+  background: color-mix(in srgb, var(--hrms-row-accent) 9%, var(--color-surface));
+}
+
+.hrms-criticality-row {
+  --hrms-row-accent: #16a34a;
+  display: grid;
+  grid-template-columns: minmax(92px, 0.9fr) minmax(112px, 1fr);
+  gap: 7px 12px;
+  min-width: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 0;
+}
+
+.hrms-criticality-row:first-child {
+  padding-top: 0;
+}
+
+.hrms-criticality-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hrms-criticality-row p {
+  justify-items: end;
+  margin: 0;
+}
+
+.hrms-criticality-row p b {
+  color: color-mix(in srgb, var(--hrms-row-accent) 88%, var(--color-foreground));
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hrms-criticality-row p span {
+  color: var(--color-muted-foreground);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: right;
+}
+
+.hrms-criticality-row > i {
+  grid-column: 1 / -1;
+  display: block;
+  overflow: hidden;
+  height: 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-border) 82%, transparent);
+}
+
+.hrms-criticality-row > i b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--hrms-row-accent) 82%, var(--color-primary));
+}
+
+.hrms-criticality-row > em {
+  grid-column: 1 / -1;
+  color: var(--color-foreground);
+  font-size: 12.5px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hrms-exception-row {
+  --hrms-row-accent: #16a34a;
+  display: grid;
+  grid-template-columns: minmax(150px, 0.92fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--hrms-row-accent) 11%, var(--color-border));
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: var(--color-surface);
+}
+
+.hrms-exception-row p {
+  margin: 0;
+}
+
+.hrms-shift-gap-row--critical,
+.hrms-criticality-row--critical,
+.hrms-exception-row--critical {
+  --hrms-row-accent: #ef4444;
+}
+
+.hrms-shift-gap-row--watch,
+.hrms-criticality-row--watch,
+.hrms-exception-row--watch {
+  --hrms-row-accent: #f59e0b;
+}
+
+.hrms-shift-gap-row--stable,
+.hrms-criticality-row--stable,
+.hrms-exception-row--stable {
+  --hrms-row-accent: #16a34a;
+}
+
+@media (max-width: 1180px) {
+  .hrms-roster-pulse-grid,
+  .hrms-clinical-grid--floor,
+  .hrms-clinical-grid--risk {
+    grid-template-columns: 1fr;
+  }
+
+  .hrms-roster-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .hrms-roster-kpi-grid,
+  .hrms-shift-gap-row,
+  .hrms-exception-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hrms-shift-action {
+    justify-items: start;
+  }
+
+  .hrms-criticality-row p {
+    justify-items: start;
+  }
+
+  .hrms-criticality-row p span {
+    text-align: left;
+  }
+}
